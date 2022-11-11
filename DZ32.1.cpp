@@ -18,10 +18,10 @@ int main()
 
 	if (F == NULL)
 	{
-		std::cout << "File 1 íå îáíàðóæåí" << std::endl;
+		std::cout << "File 1 не обнаружен" << std::endl;
 		return -1;
 	}
-	std::cout << "File 1 îòêðûò " << std::endl;
+	std::cout << "File 1 открыт  " << std::endl;
 
 
 	char str1[100];
@@ -35,10 +35,10 @@ int main()
 
 	if (G == NULL)
 	{
-		std::cout << "File 2 íå îáíàðóæåí" << std::endl;
+		std::cout << "File 2 не обнаружен" << std::endl;
 		return -1;
 	}
-	std::cout << "File 2 îòêðûò " << std::endl;
+	std::cout << "File 2 открыт " << std::endl;
 
 	char str2[100];
 	fgets(str2, 100, G);
@@ -47,22 +47,22 @@ int main()
 	std::cout << str2;
 	viz();
 
-	std::cout << "file1.txt = " << strlen(str1) << std::endl;
-	std::cout << "file2.txt = " << strlen(str2) << std::endl;
+	std::cout << "file1.txt = " << strlen(str1) << std::endl; // Длина строки file1.txt
+	std::cout << "file2.txt = " << strlen(str2) << std::endl; // Длина строки file2.txt
 	int rezalt1 = strlen(str1);
 	int rezalt2 = strlen(str2);
 	
-	 // Äåëàåì ïðîâåðêó ñîïàäàþò ñòðîêè èëè íåò ?
 
-	if (rezalt1 == rezalt2)
+	if (rezalt1 == rezalt2) // Делаем проверку сопадают строки или нет ?
 	{
-		std::cout << "Ñòðîêè ñîâïàäàþò! " << std::endl;
+		std::cout << "Строки совпадают! " << std::endl;
 
 	}
 	else
 	{
-		std::cout << "Còðîêè íå ñîâïàäàþò" << std::endl;
-		for (size_t i = 0; i < rezalt2; i++)
+		std::cout << "Cтроки не совпадают" << std::endl;
+		
+		for (size_t i = 0; i < rezalt2; i++) // Берем от длина строки file2.txt
 		{
 
 			if (str2[i] == str1[i])
